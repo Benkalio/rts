@@ -1,7 +1,7 @@
-import { Child } from './Child';
+import { Child } from "./child";
 
 const Parent = () => {
-  return <Child />
+  return <Child color="blue" />;
 };
 
 export default Parent;
