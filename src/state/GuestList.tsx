@@ -15,7 +15,7 @@ const GuestList: React.FC = () => {
 
   return (
     <div>
-      <h3>Guest List</h3>
+      <h2>Guest List</h2>
       <ul>
         {guests.map((guest) => (
           <li key={guest}>
