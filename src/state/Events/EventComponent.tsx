@@ -1,14 +1,20 @@
 
 
 const EventComponent: React.FC = () => {
-  const onChange = (e) => {
-    console.log(e);
-    
+  const onChange = (event: React.InputHTMLAttributes<HTMLInputElement>) => {
+    console.log(event);
   }
 
+  const onDragStart = () => {
+    console.log('Someone is dragging me');
+    
+  }
   return (
     <div>
-      <input onChange={(e) => console.log(e)} />
+      <input onChange={onChange} />
+      <div draggable onDragStart={onDragStart}>
+        Drag this!
+      </div>
     </div>
   );
 }
