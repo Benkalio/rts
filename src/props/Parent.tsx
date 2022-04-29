@@ -1,4 +1,4 @@
-import { ChildAsFC } from "./child";
+import { ChildAsFC } from "./Child";
 
 const Parent = () => {
   return (
