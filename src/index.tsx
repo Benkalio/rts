@@ -1,16 +1,16 @@
 import ReactDOM from "react-dom";
-import CareerPage from "./careers/CareerPage";
-// import EventComponent from "./state/Events/EventComponent";
-// import GuestList from "./state/GuestList";
-// import UserSearch from "./state/UserSearch";
+// import CareerPage from "./careers/CareerPage";
+import EventComponent from "./state/Events/EventComponent";
+import GuestList from "./state/GuestList";
+import UserSearch from "./state/UserSearch";
 
 const App = () => {
   return (
     <div>
-      {/* <UserSearch />
+      <UserSearch />
       <GuestList />
-      <EventComponent /> */}
-      <CareerPage />
+      <EventComponent />
+      {/* <CareerPage /> */}
     </div>
   );
 };
