@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom";
 // import CareerPage from "./careers/CareerPage";
-import EventComponent from "./state/Events/EventComponent";
+import EventComponent from "./events/EventComponent";
 import GuestList from "./state/GuestList";
-import UserSearch from "./state/UserSearch";
+import UserSearch from "./refs/UserSearch";
 
 const App = () => {
   return (

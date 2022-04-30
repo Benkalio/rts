@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const users = [
   { name: 'Tomi', age: 23 },
@@ -7,10 +7,23 @@ const users = [
 ];
 
 const UserSearch: React.FC = () => {
+  //users will automatically start typing in input box as soon as page loads up 
+  //this is done with ref below 
+  //reference to useEffect hook 
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
   const [name, setName] = useState('');
 
   // this state has type of object or undefined for the user search <whether found or not>
   const [user, setUser] = useState<{ name: string, age: number} | undefined>();
+
+  //effects the typing into input automatically
+  useEffect(() => {
+    if (!inputRef.current) {
+      return;
+    }
+    inputRef.current.focus();
+  }, []);
 
   const onClick = () => {
     const foundUser = users.find((user) => {
@@ -23,7 +36,10 @@ const UserSearch: React.FC = () => {
   return (
     <div>
       <h2>User search</h2>
-      <input value={name} onChange={(e) => (setName(e.target.value))} />
+      <input
+        ref={inputRef}
+        value={name}
+        onChange={(e) => (setName(e.target.value))} />
       <button onClick={onClick}>Find User</button>
       <div>
         {user && user.name}
