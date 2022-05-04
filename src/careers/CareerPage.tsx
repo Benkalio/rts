@@ -1,73 +1,94 @@
 import React from 'react';
-import styled from 'styled-components';
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Careers, CareerBody, Header, Body, Roles } from './styles';
+import styled from 'styled-components';
 
-const Header = styled.h1`
-  font-weight: strong;
-  font-size: 60px;
+const Paragraph = styled.p`
+  text-align: left;
+  line-height: 2.0;
+  font-size: 1.3rem;
+  color: #272929;
 `
-const Body = styled.div`
-  width: 500px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-` 
-const Joinus = styled.div`
-  display: grid;
-`
-const CareerBody = styled.a`
-  width: 100%;
-  background-color: lightgrey;
-  margin: 10px auto;
-  border: 0.1px solid lightgrey;
-  border-radius: 20px;
-  padding: 5px;
-  text-decoration: none;
-
-  &:hover {
-    background-color: darkgrey;
-  }
+const Hiring = styled.h2`
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  width: 60%;
+  line-height: 1.5; 
 `
 
-const Career = styled.div`
-  padding-left: 20px;
-  color: black;
-  outline: none;
+const HiringParagraph = styled.p`
+  font-size: 1.2rem;
+  color: #272929;
+  line-height: 1.5;
+`
+
+const Role = styled.h4`
+  font-size: 1.4rem;
+  padding: 0;
+  line-height: 0.5;
+  margin-bottom: 0;
+`
+const Remote = styled.p`
+  line-height: 2.0;
+  margin-top: 2px;
+`
+
+const Benefits = styled.h3`
+  font-size: 2rem;
+  margin-top: 30px;
+  padding: 25px 5px 10px;
+`
+
+const BenefitList = styled.li`
+  list-style-type: none;
+  padding: 2px;
+  margin: 5px 20px;
+  line-height: 1.5;
+`
+const Chat = styled.h3`
+  font-size: 2.5rem;
+  width: 50%;
+  line-height: 1.2;
+`
+
+const Reachout = styled.p`
+  font-size: 1.3rem;
+  line-height: 1.2;
+  width: 80%;
 `
 
 const CareerPage = () => {
-  // library.add(fas);
 
   return (
     <Body>
       <div>
         <Header>
-          We believe
-          that reading
-          is Magic
+          We believe that reading is magic.
         </Header>
-        <p>
-        And that we need new tools to keep that magic alive.
-        Think about a moment when a piece of writing opened
-        you up to a totally new understanding of your world.
-        Or when a friend had you read something that ignited a conversation
-        and forced you to articulate a belief you didn’t quite have the words for. 
-        We’re building a tool to give you more of those moments.
-        A tool that chooses agency over algorithm.
-        Debate over noise. Quality over recency.
-        We’re a team of fanatic readers who saw internet technology
-        change drastically while our tools for reading remained,
-        dismayingly, the same. So with the backing of GV, Y Combinator,
-        and many stellar angels, we set out to build something better.
-        </p>
-        <h2>
-          We’re looking for creative,
-          ambitious people to help us
-          craft the future of reading
-        </h2>
-        <p>
+        <Paragraph>
+          And that we need new tools to keep that magic alive.
+          Think about a moment when a piece of writing opened
+          you up to a totally new understanding of your world.
+          Or when a friend had you read something that ignited a conversation
+          and forced you to articulate a belief you didn’t quite have the 
+          words for.
+
+        </Paragraph>
+        <Paragraph>
+          We’re building a tool to give you more of those moments.
+          A tool that chooses agency over algorithm.
+          Debate over noise. Quality over recency.
+          We’re a team of fanatic readers who saw internet technology
+          change drastically while our tools for reading remained,
+          dismayingly, the same. So with the backing of GV, Y Combinator,
+          and many stellar angels, we set out to build something better.
+        </Paragraph>
+        <Hiring>
+          We’re looking for creative, ambitious people to help us
+          craft the future of reading.
+        </Hiring>
+        <HiringParagraph>
           You’ll fit right in if you want to take ownership of a product,
           codebase, and company from the ground up.
           We’ve developed a passionate following because we ship fast,
@@ -75,44 +96,44 @@ const CareerPage = () => {
           We’re constantly pushing the boundaries of technology
           and design to rethink what’s possible when it comes to reading.
           If that excites you, we should talk.
-        </p>
+        </HiringParagraph>
       </div>
-      <Joinus>
+      <Careers>
         <CareerBody href="#">
-          <Career>
-            <h4>Design Engineer</h4>
-            <p>Fully Remote</p>
-          </Career>
-          <Career>
-            <FontAwesomeIcon icon="square-chevron-right" />
-          </Career>
+          <Roles>
+            <Role>UI/UX Designer</Role>
+            <Remote>Fully Remote</Remote>
+          </Roles>
+          <>
+            {/* <FontAwesomeIcon icon="fa-solid fa-circle-chevron-right" /> */}
+          </>
         </CareerBody>
         <CareerBody href="#">
-          <Career>
-            <h4>Software Engineer, Backend</h4>
-            <p>Fully Remote</p>
-          </Career>
+          <Roles>
+            <Role>Software Engineer, Backend</Role>
+            <Remote>Fully Remote</Remote>
+          </Roles>
         </CareerBody>
         <CareerBody href="#">
-          <Career>
-            <h4>Open Role</h4>
-            <p>Fully Remote</p>
-          </Career>
+          <Roles>
+            <Role>Open Role</Role>
+            <Remote>Fully Remote</Remote>
+          </Roles>
         </CareerBody>
-      </Joinus>
-      <div id="benefits">
-        <h3>Benefits</h3>
-        <ul>
-          <li>Top-tier health insurance</li>
-          <li>Stipend for setting up personal workstation. (Fully Remote)</li>
-          <li>Freedom to buy or build your ideal work setup</li>
-          <li>Competitive salary and equity</li>
-          <li>Unlimited resources for books</li>
-        </ul>
+      </Careers>
+      <div>
+        <Benefits>Benefits</Benefits>
+        <BenefitList>
+          <li>✓ Top-tier health insurance</li>
+          <li>✓ Stipend for setting up personal workstation. (Fully Remote)</li>
+          <li>✓ Freedom to buy or build your ideal work setup</li>
+          <li>✓ Competitive salary and equity</li>
+          <li>✓ Unlimited resources for books</li>
+        </BenefitList>
       </div>
       <div>
-        <h3>We always love to chat.</h3>
-        <p>For features requests, reach out at help@stoicbible.com</p>
+        <Chat>We always love to chat.</Chat>
+        <Reachout>For features requests, press inquiries and more, reach out at help@stoicbible.com</Reachout>
       </div>
     </Body>
   );
