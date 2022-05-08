@@ -1,66 +1,32 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Careers, CareerBody, Header, Body, Roles } from './styles';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import {
+  Careers,
+  CareerBody,
+  Header,
+  Body,
+  Role,
+  Roles,
+  Paragraph,
+  Hiring,
+  HiringParagraph,
+  Remote, 
+  Benefits,
+  BenefitList,
+  Chat,
+  Reachout
+} from './styles';
+// import styled from 'styled-components';
 
-const Paragraph = styled.p`
-  text-align: left;
-  line-height: 2.0;
-  font-size: 1.3rem;
-  color: #272929;
-`
-const Hiring = styled.h2`
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  width: 60%;
-  line-height: 1.5; 
-`
-
-const HiringParagraph = styled.p`
-  font-size: 1.2rem;
-  color: #272929;
-  line-height: 1.5;
-`
-
-const Role = styled.h4`
-  font-size: 1.4rem;
-  padding: 0;
-  line-height: 0.5;
-  margin-bottom: 0;
-`
-const Remote = styled.p`
-  line-height: 2.0;
-  margin-top: 2px;
-`
-
-const Benefits = styled.h3`
-  font-size: 2rem;
-  margin-top: 30px;
-  padding: 25px 5px 10px;
-`
-
-const BenefitList = styled.li`
-  list-style-type: none;
-  padding: 2px;
-  margin: 5px 20px;
-  line-height: 1.5;
-`
-const Chat = styled.h3`
-  font-size: 2.5rem;
-  width: 50%;
-  line-height: 1.2;
-`
-
-const Reachout = styled.p`
-  font-size: 1.3rem;
-  line-height: 1.2;
-  width: 80%;
-`
+const theme = {
+  mobile: '768px'
+}
 
 const CareerPage = () => {
 
   return (
+    <ThemeProvider theme={theme}>
     <Body>
       <div>
         <Header>
@@ -136,6 +102,7 @@ const CareerPage = () => {
         <Reachout>For features requests, press inquiries and more, reach out at help@stoicbible.com</Reachout>
       </div>
     </Body>
+    </ThemeProvider>
   );
 }
 
