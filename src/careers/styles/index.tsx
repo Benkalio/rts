@@ -21,13 +21,16 @@ export const Header = styled.h1`
   line-height: 29px;
   letter-spacing: -0.25px;
   width: 60%;
+  margin-left: 15%;
+
   margin-top: 30px;
   font-size: 30px;
 
   @media(min-width: 700px) {
+    width: 60%;
+    margin-left: 170px;
     text-align: center;
     font-size: 60px;
-    width: 60%;
     line-height: 1;
   } 
 `
@@ -69,6 +72,12 @@ export const Roles = styled.div`
   display: grid;
   box-sizing: border-box;
   place-items: center;
+  width: 100%;
+
+  @media(min-width: 768px) {
+    width: 70%
+    align-items: left;
+  }
 `
 export const RoleBody = styled.a`
   width: 100%;
@@ -83,8 +92,8 @@ export const RoleBody = styled.a`
   }
 
   @media(min-width: 768px) {
-    width: 70%
-    justify-items: left;
+    width: 60%
+    align-items: left;
   }
 `
 export const RoleDiv = styled.a`
