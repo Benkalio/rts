@@ -5,93 +5,119 @@ export const Body = styled.div`
   width: 90%;
   max-width: 100%;
   margin: 10px auto;
-  padding 3px;
 
   @media(min-width: 768px) {
     padding: 0 20px;
   }
 
   @media(min-width: 1440px) {
-    width: 40%;
+    width: 55%;
   }
 `
 export const Header = styled.h1`
-  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 0px;
+  line-height: 29px;
+  letter-spacing: -0.25px;
+  width: 60%;
+  margin-top: 30px;
+  font-size: 30px;
 
-  @media(min-width: 768px) {
-    font-size: 70px;
-    width: 70%;
+  @media(min-width: 700px) {
+    text-align: center;
+    font-size: 60px;
+    width: 60%;
+    line-height: 1;
   } 
-
 `
 
 export const Paragraph = styled.p`
   text-align: left;
   line-height: 1.5;
-  font-size: 1.4rem;
   color: #272929;
+  font-size: 1.2rem;
 
-
+  @media(min-width: 425px){
+    font-size: 2rem;
+  }
 `
 export const Hiring = styled.h2`
-  margin-top: 30px;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  width: 100%;
+  --text-opacity: 1;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin: 20px 0;
+  line-height: 1.2;
 
   @media(min-width: 768px) {
-    width: 65%;
+    font-size: 2.2rem;
   }
 `
 export const HiringParagraph = styled.p`
   font-size: 1.2rem;
   color: #272929;
-  line-height: 1.2;
+  line-height: 1.5;
+
+  @media(min-width: 425px) {
+    font-size: 2rem;
+  }
+
 `
 
-export const Careers = styled.div`
+export const Roles = styled.div`
   display: grid;
+  box-sizing: border-box;
+  place-items: center;
 `
-export const CareerBody = styled.a`
+export const RoleBody = styled.a`
   width: 100%;
   background-color: lightgrey;
   margin: 10px auto;
-  border: 0.1px solid lightgrey;
+  border: none;
   border-radius: 20px;
-  padding: 5px;
   text-decoration: none;
 
   &:hover {
     background-color: darkgrey;
   }
 
-  @media(min-width: 768) {
-
+  @media(min-width: 768px) {
+    width: 70%
+    justify-items: left;
   }
 `
-export const RoleDiv = styled.div`
+export const RoleDiv = styled.a`
   display: flex;
   flex-direction: row;
-  align-self: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 30px;
+  text-size-adjust: 100%;
+
+  @media(min-width: 1440px) {
+    margin: 10px auto 10px;
+    width: 90%;
+  }
 `
 
-export const Roles = styled.div`
-  padding-left: 20px;
+export const Role = styled.div`
   width: 80%;
   margin: 5px;
   color: black;
   outline: none;
 `
 
-export const Role = styled.h4`
-  font-size: 1.4rem;
+export const RoleHeader = styled.h4`
+  font-size: 1.2rem;
   padding: 0;
-  line-height: 1.0;
+  line-height: 1.2;
   margin-bottom: 10px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 700px) {
+    font-size: 2rem;
     margin-bottom: 0;
-  }
+  };
 `
 export const RolesIcon = styled.div`
   color: #2d2e2d;
@@ -102,34 +128,47 @@ export const RolesIcon = styled.div`
   }
 `
 export const Remote = styled.p`
-  line-height: 2.0;
-  margin-top: 2px;
+  line-height: 1.0;
 `
 
 export const Benefits = styled.h3`
-  font-size: 2rem;
+  margin-bottom: 0;
   margin-top: 30px;
-  padding: 25px 5px 10px;
+  padding: 25px 5px 10px;  
+  font-size: 1.4rem;
+
+  @media(min-width: 425px) {
+    font-size: 2rem;
+  }
 `
 
-export const BenefitList = styled.li`
+export const BenefitList = styled.ul`
   list-style-type: none;
+  font-size: 1.1rem;
   padding: 2px;
-  margin: 5px 20px;
+  margin: 5px 10px;
   line-height: 1.5;
+
+  @media(min-width: 1024px) {
+    font-size: 1.8rem;
+  }
 `
 
 export const Chat = styled.h3`
-  font-size: 2.5rem;
-  line-height: 1.2;
+  line-height: 1.5;
+  font-size: 1.4rem;
 
-  @media(min-width: 768) {
-    width: 50%;
+  @media(min-width: 425px) {
+    font-size: 2.2rem;
   }
 `
 
 export const Reachout = styled.p`
-  font-size: 1.3rem;
-  line-height: 1.2;
-  width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 90%;
+
+  @media(min-width: 425px) {
+    font-size: 2rem;
+  }
 `
